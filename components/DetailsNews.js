@@ -13,7 +13,7 @@ const DetailsNews = ({ title, coverUrl, pubDate, content, live_url }) => {
         await Linking.openURL(live_url);
     };
     const handleSocialConnection = async () => {
-        await Linking.openURL("https://www.facebook.com/dainikishaan");
+        await Linking.openURL("https://www.facebook.com/{yourpage}");
     };
 
     const onShare = async () => {

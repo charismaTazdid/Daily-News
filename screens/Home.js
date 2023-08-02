@@ -11,7 +11,7 @@ const Home = (props) => {
 
     const loadNews = async () => {
         if (isFetching) return;
-        const url = `https://dainikishan.com/wp-json/wp/v2/posts?per_page=25&_fields=id,content,title,date,excerpt,featured_media,guid&page=${pageNumber}`;
+        const url = `https://yoursite.com/wp-json/wp/v2/posts?per_page=25&_fields=id,content,title,date,excerpt,featured_media,guid&page=${pageNumber}`;
 
         try {
             setIsLoading(true);
@@ -31,7 +31,6 @@ const Home = (props) => {
             setIsFetching(false);
         }
     };
-    // console.log(newsData)
     useEffect(() => {
         loadNews()
     }, []);
@@ -41,7 +40,7 @@ const Home = (props) => {
             <Appbar.Header>
                 {/* Logo Container */}
                 <View style={styles.logoContainer}>
-                    <Image source={{ uri: 'https://dainikishan.com/wp-content/uploads/2023/06/cropped-Di-1.png' }} style={{ width: 300, height: 75 }} />
+                    <Image source={{ uri: 'https://yoursite.com/wp-content/uploads/2023/06/cropped-Di-1.png' }} style={{ width: 300, height: 75 }} />
                 </View>
             </Appbar.Header>
 
